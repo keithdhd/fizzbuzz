@@ -9,23 +9,23 @@
 $(document).ready(function(){
 
 	var counter = 1;
+	var fizzOrBuzz = "";
 
 	for(counter; counter <= 100; counter++){
+		fizzOrBuzz = "";
 
 		if ((counter % 3) == 0 && (counter % 5) == 0 ) {
-			$('body').append("<div>" + counter + "  FizzBuzz</div>");
+			fizzOrBuzz = "FizzBuzz";
 			console.log(counter);
 		}
 		else if( (counter % 3) == 0 ){
-			$('body').append("<div>" + counter + "  Fizz</div>");
+			fizzOrBuzz = "Fizz";
 		}
 		else if( (counter % 5) == 0 ){
-			$('body').append("<div>" + counter + "  Buzz</div>");
-		}
-		else{			
-			$('body').append("<div>" + counter + "  </div>");
+			fizzOrBuzz = "Buzz";
 		}
 
+			$('body').append("<div>" + counter + " " + fizzOrBuzz + "</div>");
 	};
 
 })
